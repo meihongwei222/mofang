@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--meta:vp-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>珠峰培训</title>
+
+    <!--import css-->
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <!--REM-->
+    <script>
+        ~function () {
+            var winW = document.documentElement.clientWidth;
+            if (winW > 640) return;
+            document.documentElement.style.fontSize = (winW / 640) * 100 + 'px';
+        }();
+    </script>
+</head>
+<body>
+<main class="content">
+    <!--魔方区域-->
+    <section class="cube" id="sjziei-cube">
+        <ul class="cubeBox">
+            <li><img src="img/zf_cube1.png" alt=""></li>
+            <li><img src="img/zf_cube2.png" alt=""></li>
+            <li><img src="img/zf_cube3.png" alt=""></li>
+            <li><img src="img/zf_cube4.png" alt=""></li>
+            <li><img src="img/zf_cube5.png" alt=""></li>
+            <li><img src="img/zf_cube6.png" alt=""></li>
+        </ul>
+        <div class="cubeTip"></div>
+    </section>
+
+    <!--滑屏区域-->
+    <section class="swipe" id="sjziei-swiper">
+        <div class="return"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!--PAGE1-->
+                <div class="swiper-slide page1">
+                    <dl id="sjziei-3d" data-page="1">
+                        <dt>课程大纲</dt>
+                        <dd>
+                            <em>01</em>
+                            <a href="">HTML+CSS基础知识及实战开发</a>
+                        </dd>
+                        <dd>
+                            <em>02</em>
+                            <a href="">HTML5+CSS3基础知识及实战应用</a>
+                        </dd>
+                        <dd>
+                            <em>03</em>
+                            <a href="">JavaScript基础及核心知识</a>
+                        </dd>
+                        <dd>
+                            <em>04</em>
+                            <a href="">JavaScript设计模式及编程思想</a>
+                        </dd>
+                        <dd>
+                            <em>05</em>
+                            <a href="">JS组件：jQuery、Zepto、Iscroll、Swiper、less、sass、bootstrap...</a>
+                        </dd>
+                        <dd>
+                            <em>06</em>
+                            <a href="">掌握Angular、React、Vue等前端工程化框架</a>
+                        </dd>
+                        <dd>
+                            <em>07</em>
+                            <a href="">gulp、webpack等自动化平台的搭建</a>
+                        </dd>
+                        <dd>
+                            <em>08</em>
+                            <a href="">Node.js以及npm包管理</a>
+                        </dd>
+                        <dd>
+                            <em>09</em>
+                            <a href="">前端全栈开发：Express、mongodb数据库(NODE)、socket.io等</a>
+                        </dd>
+                        <dd>
+                            <em>10</em>
+                            <a href="">实战开发：响应式布局开发、微信及小程序开发、webApp及hybrid模式开发等</a>
+                        </dd>
+                        <dd>
+                            <em>11</em>
+                            <a href="">团队协作开发以及程序员的基本素养：git、svn、gitHub、markdown等</a>
+                        </dd>
+                    </dl>
+                </div>
+
+                <!--PAGE2-->
+                <div class="swiper-slide page2">
+                    <h2>课程体系</h2>
+                    <img src="img/zf_course.png" alt="">
+                    <img src="img/zf_course1.png" alt="">
+                    <img src="img/zf_course2.png" alt="">
+                    <img src="img/zf_course3.png" alt="">
+                    <img src="img/zf_course4.png" alt="">
+                    <img src="img/zf_course5.png" alt="">
+                    <img src="img/zf_course6.png" alt="">
+                </div>
+
+                <div class="swiper-slide page3">
+
+                </div>
+                <div class="swiper-slide page4">
+
+                </div>
+                <div class="swiper-slide page5">
+
+                </div>
+                <div class="swiper-slide page6">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--音乐区域-->
+    <section id="music">
+        <audio src="audio/Beyond.mp3" loop preload="none" id="musicAudio"></audio>
+    </section>
+</main>
+
+<!--import js-->
+<script src="js/zhufengpeixun.min.js"></script>
+<script>
+    zhufengpeixun.config({
+        cube: 'sjziei-cube',
+        swipe: 'sjziei-swiper',
+        mak: 'sjziei-3d'
+    });
+
+    var music = document.getElementById('music');
+    var musicAudio = document.getElementById('musicAudio');
+    //->当页面加载完成让音频自动播放
+    window.onload = function () {
+        musicAudio.play();//->让音频播放
+        music.className = 'move';//-><section class='move'></section>
+
+        music.onclick = function () {
+            if (musicAudio.paused) {
+                //->当前是暂停的:我们让其播放
+                musicAudio.play();
+                music.className = 'move';
+            } else {
+                //->当前是播放的:我们让其暂停
+                musicAudio.pause();
+                music.className = '';
+            }
+        }
+    };
+</script>
+</body>
+</html>

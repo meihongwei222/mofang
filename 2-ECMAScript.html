@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+</head>
+<body>
+<script>
+    //1、变量和数据类型
+    /*块状注释 ctrl + shift + /*/
+    //单行注释 ctrl + /
+
+    /*A:问你一个问题//是啥意思?
+     B:问吧?
+     A:问了啊?
+     B:问的啥?*/
+
+    /*
+     1  ->number类型的，数字(整数、小数、负数...)
+     '珠峰' ->string类型的，字符串(所有使用""/''包起来的都是字符串)
+     true ->boolean类型的，布尔类型(true/false)
+     null ->空
+     undefined ->未定义
+     {name:'周啸天'} ->object对象数据类型的
+     [1,2,3,4] ->Array数组类型(对象)
+     /^(\+|-)?(\d|([1-9]\d+))(\.\d+)?$/ ->RegExp正则类型的
+     function () {} ->function函数数据类型的
+     */
+
+    /*var num = 12;
+     var obj = {};//->JS中的变量是松散的,使用var来创建,存什么样的数据类型都可以*/
+
+
+    //2、判断语句以及循环语句
+    //判断：if else、switch case、三元运算符...
+    //循环：for、for in、while...
+
+    /*var num = 13;
+     if (num >= 10) {
+     num++;//->num+=1 ->num=num+1 ->自身基础上加一
+     } else {
+     num--;
+     }
+     alert(num);//->ALERT：在浏览器弹出一个窗口,以此来展示需要输出的内容*/
+
+    /*var num = 13;
+     num >= 10 ? num++ : num--;//->三元运算符
+     alert(num);
+
+     num >= 10 ? (num <= 20 ? num++ : num *= 3) : (num >= 0 ? num-- : num *= 2);*/
+
+
+    /*var num = 14;
+    switch (num) {
+        case 10:
+            num++;
+            break;
+        case 20:
+            num--;
+            break;
+        default:
+            num += 10;
+    }*/
+
+//    for(var i=0;i<=10;i++){
+//        if(i>=3 && i<=5){
+//            alert(i);
+//        }
+//    }
+
+
+    //->检测数据类型的四种方式
+    /*
+      typeof
+      instanceof
+      constructor
+      Object.prototype.toString.call()
+
+      数据类型分为值操作和引用地址操作(栈内存、堆内存)
+    */
+</script>
+</body>
+</html>

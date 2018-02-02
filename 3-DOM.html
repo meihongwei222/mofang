@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        #box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -100px 0 0 -100px;
+            width: 200px;
+            height: 200px;
+            background: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+
+<script>
+    /*
+     * document.getElementById：通过元素ID获取元素
+     * document.getElementsByTagName
+     * document.getElementsByClassName
+     * document.getElementsByName
+     * document.body
+     * document.head
+     * document.documentElement:获取整个页面
+     * document.querySelector
+     * document.querySelectorAll
+     *
+     * childNodes/children
+     * previousSiblings、nextSiblings
+     * ...
+     */
+    var oBox = document.getElementById('box');
+    /*oBox.onclick = function () {
+        oBox.style.backgroundColor = 'green';
+    };*/
+
+    oBox.onmouseover = function () {
+        oBox.style.backgroundColor = 'blue';
+    }
+
+    oBox.onmouseout = function () {
+        oBox.style.backgroundColor = 'pink';
+    }
+
+    oBox.onmousedown = function () {
+        oBox.style.backgroundColor = 'black';
+    }
+
+    oBox.onmouseup = function () {
+        oBox.style.backgroundColor = 'yellow';
+    }
+
+    /*
+    * 常用的事件操作
+    *   onclick
+    *   ondblclick
+    *   onmouseover
+    *   onmouseout
+    *   onmousedown
+    *   onmouseup
+    *   onmousemove
+    *   onmousewheel
+    *   onload
+    *   onerror
+    *   onscroll
+    *   onresize
+    *   ...
+    * */
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训-音视频讲解</title>
+</head>
+<body>
+<!--
+  long long long ... ago 以前，我们实现音视频的播放基本上都是基于FLASH播放的(ActionScript实现视频中交互效果开发的)
+
+  HTML5的诞生，颠覆了传统的音视频播放方案，使用 AUDIO / VIDEO 进行音视频播放
+
+  =>对于兼容的浏览器使用AUDIO/VIDEO,对于IE低版本浏览器我们采用传统的FLASH
+
+  音频处理：audio
+     src='音频的的地址' (支持的音频格式：MP3、WAV、OGG、M3U8(直播流文件))，一般我们使用MP3，当然为了更好的兼容，我们需要准备四套不同的音频格式文件(其中有一套是FLASH的)
+
+     controls  是否使用浏览器自带的播放器播放我们的音频，默认是不使用的，加上这个属性后则使用
+
+     loop 播放完成后是否重新循环播放，默认是不循环的，加上这个属性后开启循环播放
+
+     autoplay 加上这个属性后，开启自动播放(一般自动播放不用他，因为在真实项目中它存在一些BUG，我们的自播放是基于JS来处理的)
+
+     preload 设置预先加载的模式：auto(默认值)开始加载页面的时候就把音频文件进行下载了 metadata开始的时候只下载音频的基本信息  none开始什么都不下载,只有播放的时候才开始下载(推荐)
+-->
+<!--<audio>
+    <source src="xxx.mp3" type="audio/mpeg"/>
+    <source src="xxx.wav" type="audio/wav"/>
+    <source src="xxx.ogg" type="audio/ogg"/>
+    <embed src="xxx.swf"></embed>
+</audio>-->
+
+<audio src="audio/Beyond.mp3" preload="none" controls loop></audio>
+
+<!--视频：MP4、WMV、OGG...-->
+<style>
+    video {
+        display: block;
+        width: 500px;
+        height: 300px;
+        background: #000;
+        margin: 20px auto;
+    }
+</style>
+<video src="audio/nevergiveup.mp4" controls preload="none"></video>
+
+</body>
+</html>
